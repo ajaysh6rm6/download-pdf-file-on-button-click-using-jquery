@@ -11,7 +11,8 @@
 <button type="button" id="GetFile">Download</button>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
-$('#GetFile').on('click', function () {
+$('#GetFile').on('click', function (event) {
+event.preventDefault();
     $.ajax({
         url: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/172905/test.pdf',
         method: 'GET',
